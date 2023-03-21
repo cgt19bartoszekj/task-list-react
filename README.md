@@ -2,6 +2,9 @@
 
 It is recreated task list project in react. Site doesn't have any functionality yet.
 
+**Demo:**
+https://cgt19bartoszekj.github.io/task-list-react/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
