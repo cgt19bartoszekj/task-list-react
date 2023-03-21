@@ -1,6 +1,6 @@
 # Task list React
 
-Description
+It is recreated task list project in react. Site doesn't have any functionality yet.
 
 # Getting Started with Create React App
 

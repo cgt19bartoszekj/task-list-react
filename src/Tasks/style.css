@@ -32,7 +32,7 @@
         background-color: #008800;
         border: none;
         color: #008800;
-        transition: 1s;
+        transition: 0.5s;
     }
     
     .tasks__button:hover {
