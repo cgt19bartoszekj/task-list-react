@@ -1,12 +1,13 @@
-.buttons{
+.buttons {
   display: grid;
   grid-template-columns: auto auto;
   gap: 20px;
 }
 
 @media screen and (max-width: 800px) {
-  .buttons{
-      grid-template-columns: 1fr;
+  .buttons {
+    grid-template-columns: 1fr;
+    margin: 30px;
   }
 }
 
@@ -18,19 +19,19 @@
   transition: 1s;
 }
 
-.buttons__button:hover{
+.buttons__button:hover {
   color: hsl(187, 100%, 40%);
 }
 
-.buttons__button:active{
+.buttons__button:active {
   color: hsl(187, 100%, 60%);
 }
 
-.buttons__button:disabled{
+.buttons__button:disabled {
   color: grey;
   cursor: none;
 }
 
-.buttons__button--hidden{
+.buttons__button--hidden {
   display: none;
 }
