@@ -7,7 +7,7 @@ import Container from "./Container"
 
 const tasks = [
   { id: 1, name: "Zrobić zakupy", done: true },
-  { id: 2, name: "Wyjść z psem na spacer", done: true }
+  { id: 2, name: "Wyjść z psem na spacer", done: false }
 ]
 
 let doneTasksHidden = false;
