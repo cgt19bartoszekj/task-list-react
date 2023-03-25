@@ -1,6 +1,6 @@
 import "./style.css"
 
-const Buttons = ({ tasks, doneTasksHidden }) => (
+const Buttons = ({tasks, doneTasksHidden}) => (
 	<div className="buttons">
 		{tasks.length > 0 && (
 			<>
