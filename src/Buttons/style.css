@@ -29,9 +29,5 @@
 
 .buttons__button:disabled {
   color: grey;
-  cursor: none;
-}
-
-.buttons__button--hidden {
-  display: none;
+  cursor: default;
 }
