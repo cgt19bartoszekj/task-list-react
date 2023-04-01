@@ -1,11 +1,21 @@
 # Task list React
 
-It is recreated task list project in react. Site doesn't have any functionality yet.
+
+## About this project.
+It is recreated task list project in react.
+This site allows you to add **tasks**, **remove** them and **check as done**
+
+!["Website gif"](./public/tasks-list-main-gif.gif)
+
+
+You can also **check all tasks** as done, and **hide done tasks**.
+
+!["Website features gif"](./public/task-list-features-gif.gif)
 
 **Demo:**
 https://cgt19bartoszekj.github.io/task-list-react/
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
