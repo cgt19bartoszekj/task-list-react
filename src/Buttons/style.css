@@ -20,11 +20,11 @@
 }
 
 .buttons__button:hover {
-  color: hsl(187, 100%, 40%);
+  color: #00b4cc;
 }
 
 .buttons__button:active {
-  color: hsl(187, 100%, 60%);
+  color: #33e7ff;
 }
 
 .buttons__button:disabled {

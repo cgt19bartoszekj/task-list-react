@@ -8,7 +8,7 @@
 	display: grid;
 	align-items: center;
 	grid-template-columns: auto 1fr auto;
-	border-bottom: 1px solid #dbdbdb;
+	border-bottom: 1px solid #bbbbbb;
 	padding: 12px 0;
 }
 
