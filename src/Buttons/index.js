@@ -1,4 +1,4 @@
-import "./style.css"
+import "./style.css";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, toggleAllDone }) => (
 	<div className="buttons">

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import "./style.css"
+import "./style.css";
 
 const Form = ({ addNewTask }) => {
-
 	const [newTaskName, setNewtaskName] = useState("");
 
 	const onFormSubmit = (event) => {
 		event.preventDefault();
+
 		if (newTaskName !== "") {
 			addNewTask(newTaskName);
 			setNewtaskName("");
@@ -28,6 +28,6 @@ const Form = ({ addNewTask }) => {
 			</button>
 		</form>
 	);
-}
+};
 
 export default Form;

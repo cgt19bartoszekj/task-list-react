@@ -1,36 +1,34 @@
-import React, { useState } from "react"
-import Form from "./Form"
-import Tasks from "./Tasks"
-import Buttons from "./Buttons"
-import Section from "./Section"
-import Header from "./Header"
-import Container from "./Container"
+import { useState } from "react";
+import Form from "./Form";
+import Tasks from "./Tasks";
+import Buttons from "./Buttons";
+import Section from "./Section";
+import Header from "./Header";
+import Container from "./Container";
 
 function App() {
-
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState([]);
 
   const toggleHideDone = () => {
-    setHideDone(hideDone => !hideDone)
+    setHideDone(hideDone => !hideDone);
   };
 
   const removeTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id))
+    setTasks(tasks => tasks.filter(task => task.id !== id));
   };
 
   const toggleTaskDone = (id) => {
-    setTasks(tasks => tasks.map(task => {
-      if (task.id === id) {
-        return { ...task, done: !task.done }
-      }
-      return task;
-    }))
+    setTasks(tasks => tasks.map(task =>
+      task.id === id
+        ? { ...task, done: !task.done }
+        : task
+    ));
   };
 
   const toggleAllDone = () => {
-    setTasks(tasks => tasks.map(task => ({ ...task, done: true })))
-  }
+    setTasks(tasks => tasks.map(task => ({ ...task, done: true })));
+  };
 
   const addNewTask = (newTaskName) => {
     setTasks(tasks =>
@@ -42,13 +40,15 @@ function App() {
           done: false
         }
       ]
-    )
-  }
+    );
+  };
 
 
   return (
     <Container>
-      <Header title="Lista zadań" />
+      <Header
+        title="Lista zadań"
+      />
       <Section
         title="Dodaj nowe zadanie"
         body={
@@ -65,17 +65,19 @@ function App() {
             hideDone={hideDone}
             removeTask={removeTask}
             toggleTaskDone={toggleTaskDone}
-          />}
+          />
+        }
         extraHeaderContent={
           <Buttons
             tasks={tasks}
             hideDone={hideDone}
             toggleHideDone={toggleHideDone}
             toggleAllDone={toggleAllDone}
-          />}
+          />
+        }
       />
     </Container>
-  )
+  );
 }
 
 export default App;
