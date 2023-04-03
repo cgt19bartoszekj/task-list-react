@@ -23,11 +23,7 @@
   color: #00b4cc;
 }
 
-.buttons__button:active {
-  color: #33e7ff;
-}
-
 .buttons__button:disabled {
-  color: grey;
+  color: #b3b3b3;
   cursor: default;
 }
