@@ -1,9 +1,11 @@
 # Task list React
 
+**Demo:**
+https://cgt19bartoszekj.github.io/task-list-react/
 
 ## About this project.
 It is recreated task list project in react.
-This site allows you to add **tasks**, **remove** them and **check as done**
+This site allows you to add **tasks**, **remove** them and **check as done**.
 
 !["Website gif"](./public/tasks-list-main-gif.gif)
 
@@ -11,9 +13,6 @@ This site allows you to add **tasks**, **remove** them and **check as done**
 You can also **check all tasks** as done, and **hide done tasks**.
 
 !["Website features gif"](./public/task-list-features-gif.gif)
-
-**Demo:**
-https://cgt19bartoszekj.github.io/task-list-react/
 
 ## Getting Started with Create React App
 
@@ -40,6 +39,10 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run deploy`
+
+Builds the app and deploys it on GitHub Pages.
 
 ### `npm run eject`
 
