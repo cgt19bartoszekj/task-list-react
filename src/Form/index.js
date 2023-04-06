@@ -15,12 +15,13 @@ const Form = ({ addNewTask }) => {
 
 	return (
 		<form
+			className="form"
 			onSubmit={onFormSubmit}
-			className="form">
+		>
 			<input
+				className="form__input"
 				onInput={({ target }) => setNewtaskName(target.value)}
 				value={newTaskName}
-				className="form__input"
 				placeholder="Co jest do zrobienia?"
 			/>
 			<button className="form__addButton">
