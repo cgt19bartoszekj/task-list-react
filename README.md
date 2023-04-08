@@ -6,6 +6,7 @@ https://cgt19bartoszekj.github.io/task-list-react/
 ## About this project.
 It is recreated task list project in react.
 This site allows you to add **tasks**, **remove** them and **check as done**.
+Website stores your tasks in local storage.
 
 !["Website gif"](./public/tasks-list-main-gif.gif)
 
