@@ -1,6 +1,6 @@
 import { Wrapper, Button } from "./styled";
 
-const Buttons = ({
+export const Buttons = ({
 	tasks,
 	hideDone,
 	toggleHideDone,
@@ -24,5 +24,3 @@ const Buttons = ({
 		)}
 	</Wrapper>
 );
-
-export default Buttons;

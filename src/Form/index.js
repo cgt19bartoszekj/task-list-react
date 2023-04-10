@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { Wrapper, Input, Button } from "./styled";
 
-const Form = ({ addNewTask }) => {
+export const Form = ({ addNewTask }) => {
 	const [newTaskName, setNewtaskName] = useState("");
 	const inputRef = useRef(null);
 
@@ -29,5 +29,3 @@ const Form = ({ addNewTask }) => {
 		</Wrapper>
 	);
 };
-
-export default Form;
