@@ -1,4 +1,4 @@
-import { List, Task, Button, Content } from "./styled";
+import { List, Task, Button, Content } from "./styled.js";
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
 	<List>
