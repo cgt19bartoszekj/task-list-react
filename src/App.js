@@ -8,48 +8,48 @@ import { Buttons } from "./Buttons";
 import { Tasks } from "./Tasks";
 
 function App() {
-	const [hideDone, setHideDone] = useState(false);
+  const [hideDone, setHideDone] = useState(false);
 
-	const toggleHideDone = () => {
-		setHideDone((hideDone) => !hideDone);
-	};
+  const toggleHideDone = () => {
+    setHideDone((hideDone) => !hideDone);
+  };
 
-	const {
-		tasks,
-		removeTask,
-		toggleTaskDone,
-		toggleAllDone,
-		addNewTask
-	} = useTasks();
+  const {
+    tasks,
+    removeTask,
+    toggleTaskDone,
+    toggleAllDone,
+    addNewTask
+  } = useTasks();
 
-	return (
-		<Container>
-			<Header title="Lista zadań" />
-			<Section
-				title="Dodaj nowe zadanie"
-				body={<Form addNewTask={addNewTask} />}
-			/>
-			<Section
-				title="Lista zadań"
-				body={
-					<Tasks
-						tasks={tasks}
-						hideDone={hideDone}
-						removeTask={removeTask}
-						toggleTaskDone={toggleTaskDone}
-					/>
-				}
-				extraHeaderContent={
-					<Buttons
-						tasks={tasks}
-						hideDone={hideDone}
-						toggleHideDone={toggleHideDone}
-						toggleAllDone={toggleAllDone}
-					/>
-				}
-			/>
-		</Container>
-	);
+  return (
+    <Container>
+      <Header title="Lista zadań" />
+      <Section
+        title="Dodaj nowe zadanie"
+        body={<Form addNewTask={addNewTask} />}
+      />
+      <Section
+        title="Lista zadań"
+        body={
+          <Tasks
+            tasks={tasks}
+            hideDone={hideDone}
+            removeTask={removeTask}
+            toggleTaskDone={toggleTaskDone}
+          />
+        }
+        extraHeaderContent={
+          <Buttons
+            tasks={tasks}
+            hideDone={hideDone}
+            toggleHideDone={toggleHideDone}
+            toggleAllDone={toggleAllDone}
+          />
+        }
+      />
+    </Container>
+  );
 }
 
 export default App;
