@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   grid-template-columns: auto auto;
   gap: 20px;
 
-  @media (max-width: 700px) {
+  @media (max-width: ${({theme}) => theme.breakpoints.mobile}px) {
     grid-template-columns: 1fr;
     margin: 30px;
   }
@@ -15,11 +15,11 @@ export const Button = styled.button`
   cursor: pointer;
   background: none;
   border: none;
-  color: #007382;
+  color: ${({ theme }) => theme.colors.teal};
   transition: 1s;
 
   &:hover {
-    color: #00b4cc;
+    color: ${({ theme }) => theme.colors.eal};
   }
 
   &:disabled {

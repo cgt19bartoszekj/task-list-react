@@ -1,61 +1,62 @@
 import styled, { css } from "styled-components";
 
 export const List = styled.ul`
-  margin: 0;
-  list-style: none;
-  padding: 0;
+	margin: 0;
+	list-style: none;
+	padding: 0;
 `;
 
 export const Task = styled.li`
-  display: grid;
-  grid-gap: 10px;
-  align-items: center;
-  grid-template-columns: auto 1fr auto;
-  border-bottom: 1px solid #dddddd;
-  padding: 10px;
+	display: grid;
+	grid-gap: 10px;
+	align-items: center;
+	grid-template-columns: auto 1fr auto;
+	border-bottom: 1px solid
+		${({ theme }) => theme.colors.grey};
+	padding: 10px;
 
-  ${({ hidden }) =>
-    hidden &&
-    css`
-      display: none;
-    `}
+	${({ hidden }) =>
+		hidden &&
+		css`
+			display: none;
+		`}
 `;
 
 export const Button = styled.button`
-  border: none;
-  color: #ffffff;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  transition: background 0.5s;
-  cursor: pointer;
+	border: none;
+	color: ${({ theme }) => theme.colors.white};
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	transition: background 0.5s;
+	cursor: pointer;
 
-  ${({ toggleDone }) =>
-    toggleDone &&
-    css`
-      background-color: #008800;
+	${({ toggleDone }) =>
+		toggleDone &&
+		css`
+			background-color: ${({ theme }) => theme.colors.green};
 
-      &:hover {
-        background-color: #00ff00;
-      }
-    `}
+			&:hover {
+				background-color: ${({ theme }) => theme.colors.brightGreen};
+			}
+		`}
 
-  ${({ remove }) =>
-    remove &&
-    css`
-      background-color: #900000;
+	${({ remove }) =>
+		remove &&
+		css`
+			background-color: ${({ theme }) => theme.colors.darkRed};
 
-      &:hover {
-        background: #ff0000;
-      }
-    `}
+			&:hover {
+				background: ${({ theme }) => theme.colors.red};
+			}
+		`}
 `;
 
 export const Content = styled.span`
-  ${({ done }) =>
-    done &&
-    css`
-      color: #323232;
-      text-decoration: line-through;
-    `}
+	${({ done }) =>
+		done &&
+		css`
+			color: ${({ theme }) => theme.colors.darkGrey};
+			text-decoration: line-through;
+		`}
 `;
