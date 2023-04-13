@@ -30,26 +30,23 @@ export const Button = styled.button`
 	padding: 0;
 	transition: background 0.5s;
 	cursor: pointer;
+`;
 
-	${({ toggleDone }) =>
-		toggleDone &&
-		css`
-			background-color: ${({ theme }) => theme.colors.green};
+export const ToggleDoneButton = styled(Button)`
+	background-color: ${({ theme }) => theme.colors.green};
 
-			&:hover {
-				background-color: ${({ theme }) => theme.colors.brightGreen};
-			}
-		`}
+	&:hover {
+		background-color: ${({ theme }) =>
+		theme.colors.brightGreen};
+	}
+`;
 
-	${({ remove }) =>
-		remove &&
-		css`
-			background-color: ${({ theme }) => theme.colors.darkRed};
-
-			&:hover {
-				background: ${({ theme }) => theme.colors.red};
-			}
-		`}
+export const RemoveButton = styled(Button)`
+	background-color: ${({ theme }) => theme.colors.darkRed};
+	
+	&:hover {
+		background: ${({ theme }) => theme.colors.red};
+	}
 `;
 
 export const Content = styled.span`
