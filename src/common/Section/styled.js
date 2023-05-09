@@ -9,6 +9,7 @@ export const Wrapper = styled.section`
 export const Header = styled.header`
 	display: grid;
 	grid-template-columns: 1fr auto;
+	gap: 20px;
 	padding: 20px;
 	border-bottom: 1px solid
 		${({ theme }) => theme.colors.grey};
