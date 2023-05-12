@@ -4,9 +4,13 @@ import { Section } from "../../common/Section";
 
 const Author = () => (
   <Container>
-    <Header title="O autorze"/>
-    <Section>
-    </Section>
+    <Header title="O autorze" />
+    <Section
+      title="Jakub Bartoszek"
+      body={
+        <p>O mnie</p>
+      }
+    />
   </Container>
 );
 
