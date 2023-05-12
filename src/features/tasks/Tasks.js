@@ -6,8 +6,11 @@ import { Form } from "./Form";
 import { Buttons } from "./Buttons";
 import { TaskList } from "./TaskList";
 import { Button } from "../../common/Button/styled";
+import { useDispatch } from "react-redux";
+import { fetchExampleTasks } from "./tasksSlice";
 
 function Tasks() {
+  const dispatch = useDispatch();
 
   return (
     <Container>
@@ -16,7 +19,7 @@ function Tasks() {
         title="Dodaj nowe zadanie"
         body={<Form />}
         extraHeaderContent={
-          <Button>
+          <Button onClick={() => dispatch(fetchExampleTasks())}>
             Pobierz przykładowe zadania
           </Button>
         }
