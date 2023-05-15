@@ -10,7 +10,6 @@ html {
 }
 
 body {
-  max-width: 1000px;
   margin: 0 auto;
   background-color: ${({ theme }) => theme.colors.brightGrey};
   font-family: "Montserrat", sans-serif;
