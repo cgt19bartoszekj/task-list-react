@@ -1,25 +1,29 @@
-import { Link, Routes, Route, HashRouter } from "react-router-dom";
-import Tasks from "./features/tasks/Tasks";
-import Author from "./features/author/Author";
+import { Routes, Route, HashRouter, Navigate } from "react-router-dom";
+import TasksPage from "./features/tasks/TasksPage";
+import TaskPage from "./features/tasks/TaskPage";
+import AuthorPage from "./features/author/AuthorPage";
+import { Navigation } from "./common/Navigation";
 
 const App = () => (
   <HashRouter>
-    <nav>
-      <ul>
-        <li>
-          <Link to="/zadania">Zadania</Link>
-          <Link to="/autor">O autorze</Link>
-        </li>
-      </ul>
-    </nav>
+    <Navigation />
     <Routes>
       <Route
+        path="/zadania/:id"
+        element={<TaskPage />}>
+      </Route>
+      <Route
         path="/zadania"
-        element={<Tasks />}>
+        element={<TasksPage />}>
       </Route>
       <Route
         path="/autor"
-        element={<Author />}>
+        element={<AuthorPage />}>
+      </Route>
+      <Route
+        path="/"
+        element={<Navigate to="/zadania"></Navigate>}
+      >
       </Route>
     </Routes>
   </HashRouter>
