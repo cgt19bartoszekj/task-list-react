@@ -1,7 +1,8 @@
 import { useState, useRef } from "react";
-import { Wrapper, Input, Button } from "./styled";
+import { Wrapper, Button } from "./styled";
+import { Input } from "../../../../common/Input/styled";
 import { useDispatch } from "react-redux";
-import { addTask } from "../tasksSlice";
+import { addTask } from "../../tasksSlice";
 import { nanoid } from "@reduxjs/toolkit";
 
 export const Form = () => {
@@ -24,7 +25,7 @@ export const Form = () => {
         done: false,
         id: nanoid()
       }));
-      
+
       setNewtaskName("");
     }
     resetInput();
