@@ -6,7 +6,6 @@ export const getCurrentDate = () => {
     timeStyle: "short"
   });
 
-  console.log(currentDate);
   return currentDate;
 }
 

@@ -30,6 +30,15 @@ const tasksSlice = createSlice({
         task.done = true;
       };
     },
+    toggleEdit: ({ tasks }, { payload: taskId }) => {
+      const index = tasks.findIndex(task => task.id === taskId);
+      tasks[index].editable = !tasks[index].editable;
+    },
+    editTask: ({ tasks }, { payload: [taskId, newEditedName] }) => {
+      const index = tasks.findIndex(task => task.id === taskId);
+      tasks[index].editable = !tasks[index].editable;
+      tasks[index].name = newEditedName;
+    },
     fetchExampleTasks: state => {
       state.loading = true;
     },
@@ -48,6 +57,8 @@ export const {
   toggleTaskDone,
   removeTask,
   toggleAllDone,
+  toggleEdit,
+  editTask,
   fetchExampleTasks,
   fetchExampleTasksSuccess,
   fetchExampleTasksError,

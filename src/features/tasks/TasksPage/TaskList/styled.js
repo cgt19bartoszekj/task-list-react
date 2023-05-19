@@ -11,7 +11,7 @@ export const Task = styled.li`
 	display: grid;
 	grid-gap: 10px;
 	align-items: center;
-	grid-template-columns: auto 1fr auto;
+	grid-template-columns: auto 1fr auto auto;
 	border-bottom: 1px solid
 		${({ theme }) => theme.colors.grey};
 	padding: 10px;
@@ -48,6 +48,14 @@ export const RemoveButton = styled(Button)`
 	&:hover {
 		background: ${({ theme }) => theme.colors.red};
 	}
+`;
+
+export const EditButton = styled(Button)`
+	background-color: ${({ theme }) => theme.colors.darkGrey};
+`;
+
+export const SaveButton = styled(Button)`
+	background-color: ${({ theme }) => theme.colors.darkGrey};
 `;
 
 export const Content = styled.span`
