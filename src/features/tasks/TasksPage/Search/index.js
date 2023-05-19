@@ -20,7 +20,6 @@ export const Search = () => {
     }
 
     navigate(`${location.pathname}?${searchParams.toString()}`);
-    console.log(searchParams);
   };
 
   return (
