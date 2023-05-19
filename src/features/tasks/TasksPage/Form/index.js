@@ -4,6 +4,7 @@ import { Input } from "../../../../common/Input/styled";
 import { useDispatch } from "react-redux";
 import { addTask } from "../../tasksSlice";
 import { nanoid } from "@reduxjs/toolkit";
+import { getCurrentDate } from "../../getCurrentDate";
 
 export const Form = () => {
   const [newTaskName, setNewtaskName] = useState("");
@@ -23,12 +24,14 @@ export const Form = () => {
       dispatch(addTask({
         name: newTaskName,
         done: false,
-        id: nanoid()
+        id: nanoid(),
+        date: getCurrentDate()
       }));
 
       setNewtaskName("");
     }
     resetInput();
+
   };
 
   return (

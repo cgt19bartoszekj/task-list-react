@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import { Container } from "../../../common/Container/styled";
 import { Header } from "../../../common/Header";
@@ -8,16 +7,29 @@ import { getTasksById } from "../tasksSlice";
 
 function TaskPage() {
   const { id } = useParams();
-  const task = useSelector(state => getTasksById(state, id));
+  const task = useSelector((state) => getTasksById(state, id)
+  );
 
   return (
     <Container>
       <Header title="Szczegóły zadania" />
       <Section
         title={task ? task.name : "Nie znaleziono zadania"}
-        body={task
-          ? <><strong>Ukończono: </strong>{task.done ? "Tak" : "Nie"}</>
-          : "Przykro nam, takie zadanie nie istnieje."
+        body={
+          task ? (
+            <>
+              <p>
+                <strong>Ukończono: </strong>
+                {task.done ? "Tak" : "Nie"}
+              </p>
+              <p>
+                <strong>Data utworzenia: </strong>
+                {task.date}
+              </p>
+            </>
+          ) : (
+            "Przykro nam, takie zadanie nie istnieje."
+          )
         }
       />
     </Container>

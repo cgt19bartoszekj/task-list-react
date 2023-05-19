@@ -5,7 +5,7 @@ export const Button = styled.button`
 	background: none;
 	border: none;
 	color: ${({ theme }) => theme.colors.teal};
-	transition: 1s;
+	transition: 0.5s;
 
 	&:hover {
 		color: ${({ theme }) => theme.colors.brightTeal};
@@ -14,5 +14,6 @@ export const Button = styled.button`
 	&:disabled {
 		color: #b3b3b3;
 		cursor: default;
+		transition: 0s;
 	}
 `;

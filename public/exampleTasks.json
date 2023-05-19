@@ -2,11 +2,13 @@
 	{
 		"name": "Oznaczyć to zadanie jako oznaczone",
 		"done": false,
-		"id": "eEKpOT7APS4BUeJ4X3zkC"
+		"id": "eEKpOT7APS4BUeJ4X3zkC",
+		"date": "Brak daty dla zadania przykładowego"
 	},
 	{
 		"name": "Ukończyć wszystkie zadania",
 		"done": false,
-		"id": "XLaT_GaaOB1xFWbBeQaV4"
+		"id": "XLaT_GaaOB1xFWbBeQaV4",
+		"date": "Brak daty dla zadania przykładowego"
 	}
 ]

@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getTasksFromLocalStorage } from "./tasksLocalStorage";
+import { getCurrentDate } from "./getCurrentDate";
 
 const tasksSlice = createSlice({
   name: "tasks",
   initialState: {
     tasks: getTasksFromLocalStorage(),
     hideDone: false,
-    loading: false
+    loading: false,
+    date: getCurrentDate(),
   },
   reducers: {
     addTask: ({ tasks }, { payload: task }) => {

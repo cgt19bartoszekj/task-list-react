@@ -21,7 +21,7 @@ function TaskPage() {
         title="Dodaj nowe zadanie"
         body={<Form />}
         extraHeaderContent={
-          <Button onClick={() => dispatch(fetchExampleTasks())}>
+          <Button disabled={loading} onClick={() => dispatch(fetchExampleTasks())}>
             {loading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
           </Button>
         }
