@@ -37,8 +37,7 @@ export const TaskList = () => {
                 <Input
                   ref={inputRef}
                   onChange={({ target }) => { setNewEditedName(target.value); }}
-                  onInput={console.log("lol")}
-                  value={newEditedName}
+                  value={newEditedName || task.name}
                 />
               ) : (
                 <StyledLink to={`/zadania/${task.id}`}>
