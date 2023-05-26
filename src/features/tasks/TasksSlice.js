@@ -30,7 +30,7 @@ const tasksSlice = createSlice({
         task.done = true;
       };
     },
-    toggleEdit: ({ tasks }, { payload: taskId }) => {
+    toggleEdit: ({ tasks }, { payload: [taskId, newEditedName] }) => {
       const index = tasks.findIndex(task => task.id === taskId);
       tasks[index].editable = !tasks[index].editable;
     },
@@ -38,6 +38,11 @@ const tasksSlice = createSlice({
       const index = tasks.findIndex(task => task.id === taskId);
       tasks[index].editable = !tasks[index].editable;
       tasks[index].name = newEditedName;
+    },
+    saveAllTasks: ({ tasks }) => {
+      for (const task of tasks) {
+        task.editable = false;
+      }
     },
     fetchExampleTasks: state => {
       state.loading = true;
@@ -53,12 +58,13 @@ const tasksSlice = createSlice({
 });
 export const {
   addTask,
+  removeTask,
   toggleHideDone,
   toggleTaskDone,
-  removeTask,
   toggleAllDone,
   toggleEdit,
   editTask,
+  saveAllTasks,
   fetchExampleTasks,
   fetchExampleTasksSuccess,
   fetchExampleTasksError,
@@ -72,6 +78,8 @@ export const selectIsLoading = (state) => selectTasksState(state).loading;
 export const selectAreTasksEmpty = (state) => selectTasks(state).length === 0;
 export const selectIsEveryDone = (state) =>
   selectTasks(state).every(({ done }) => done);
+export const selectIsEverySaved = (state) =>
+  selectTasks(state).every(({ editable }) => editable);
 
 export const getTasksById = (state, taskId) =>
   selectTasks(state).find(({ id }) => id === taskId);
