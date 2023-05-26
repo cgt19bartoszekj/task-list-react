@@ -1,6 +1,6 @@
 import { List, Task, Content, RemoveButton, ToggleDoneButton, EditButton, StyledLink, SaveButton } from "./styled.js";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleTaskDone, removeTask, toggleEdit, editTask, selectHideDone, selectTasksByQuery, saveAllTasks, selectIsEverySaved } from "../../tasksSlice";
+import { toggleTaskDone, removeTask, toggleEdit, editTask, selectHideDone, selectTasksByQuery, saveAllTasks } from "../../tasksSlice";
 import { useLocation } from "react-router-dom";
 import { searchQueryParamName } from "../searchQueryParamName.js";
 import { Input } from "../../../../common/Input/styled.js";
@@ -18,7 +18,6 @@ export const TaskList = () => {
 
   const tasks = useSelector(state => selectTasksByQuery(state, name));
   const hideDone = useSelector(selectHideDone);
-  const isEverySaved = useSelector(selectIsEverySaved)
 
   return (
     <List>
